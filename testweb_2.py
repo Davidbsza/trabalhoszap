@@ -56,7 +56,7 @@ def step_open_browser(context):
     context.driver.get("https://web.whatsapp.com")
 
     print("Aguardando login no WhatsApp Web...")
-    time.sleep(60)  # tempo para escanear o QR Code manualmente
+    time.sleep(20)  # tempo para escanear o QR Code manualmente
 
 
 # ----------------------------------------
@@ -69,13 +69,13 @@ def step_search_contact(context):
         By.XPATH, '//div[@contenteditable="true"][@data-tab="3"]'
     )
 
-    contato = "Nome do Contato"  # 🔹 altere aqui o nome que aparece no WhatsApp
+    contato = "[QA IBTECH | AGO/25]"  # 🔹 altere aqui o nome que aparece no WhatsApp
 
     campo_pesquisa.click()
     campo_pesquisa.send_keys(contato)
     time.sleep(2)
     campo_pesquisa.send_keys(Keys.RETURN)
-    print(f"Contato '{("[QA IBTECH|AGO/25]")}' selecionado com sucesso!")
+    print(f"Contato '{"contato"}' selecionado com sucesso!")
 
 
 # ----------------------------------------
